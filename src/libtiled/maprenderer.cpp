@@ -122,25 +122,30 @@ void CellRenderer::render(const Cell &cell, const QPointF &pos, Origin origin)
     float cellHalfHeight = 21.5;
 
     QPointF originalOffset;
-    originalOffset.setX(cell.tile->property(QLatin1String("originalX")).toFloat(0));
-    originalOffset.setY(cell.tile->property(QLatin1String("originalY")).toFloat(0));
-
-    /*QPointF customOffset;
-    customOffset.setX(cell.tile->property(QLatin1String("customX")).toFloat(0));
-    customOffset.setY(cell.tile->property(QLatin1String("customY")).toFloat(0));*/
 
     QPainter::PixmapFragment fragment;
-    fragment.x = pos.x() + offset.x() + sizeHalf.x() + cellHalfWidth - originalOffset.x()/* - customOffset.x()*/;
-    fragment.y = pos.y() + offset.y() + sizeHalf.y() - cellHalfHeight - originalOffset.y()/* - customOffset.y()*/;
     fragment.sourceLeft = 0;
     fragment.sourceTop = 0;
     fragment.width = size.width();
     fragment.height = size.height();
-    if (cell.tile->property(QLatin1String("hasHorizontalSymmetry")).compare(QLatin1String("true")) == 0)
-        fragment.scaleX = cell.flippedHorizontally ? -1 : 1;
+
+    if (cell.tile->property(QLatin1String("hasHorizontalSymmetry")).compare(QLatin1String("true")) == 0 && cell.flippedHorizontally)
+    {
+        originalOffset.setX(cell.tile->property(QLatin1String("mirrorX")).toFloat(0));
+        originalOffset.setY(cell.tile->property(QLatin1String("mirrorY")).toFloat(0));
+
+        fragment.scaleX = -1;
+    }
     else
+    {
+        originalOffset.setX(cell.tile->property(QLatin1String("originalX")).toFloat(0));
+        originalOffset.setY(cell.tile->property(QLatin1String("originalY")).toFloat(0));
+
         fragment.scaleX = 1;
-    //fragment.scaleY = cell.flippedVertically ? -1 : 1;
+    }
+
+    fragment.x = pos.x() + offset.x() + sizeHalf.x() + cellHalfWidth - originalOffset.x();
+    fragment.y = pos.y() + offset.y() + sizeHalf.y() - cellHalfHeight - originalOffset.y();
     fragment.scaleY = 1;
     fragment.rotation = 0;
     fragment.opacity = 1;
