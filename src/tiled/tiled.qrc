@@ -1,6 +1,5 @@
 <RCC>
     <qresource prefix="/">
-        <file>images/about-tiled-logo.png</file>
         <file>images/16x16/add.png</file>
         <file>images/16x16/remove.png</file>
         <file>images/16x16/application-exit.png</file>
@@ -30,7 +29,6 @@
         <file>images/16x16/terminal.png</file>
         <file>images/16x16/terminal-green.png</file>
         <file>images/16x16/terminal-red.png</file>
-        <file>images/16x16/tiled.png</file>
         <file>images/16x16/zoom-in.png</file>
         <file>images/16x16/zoom-original.png</file>
         <file>images/16x16/zoom-out.png</file>
@@ -76,13 +74,13 @@
         <file>images/16x16/show_hide_others.png</file>
         <file>images/24x24/dice.png</file>
         <file>images/24x24/terrain-edit.png</file>
-        <file>images/32x32/tiled.png</file>
         <file>images/24x24/move-image-layer.png</file>
         <file>images/16x16/rename.png</file>
-        <file>images/16x16/application-x-sydoria.png</file>
-        <file>images/16x16/sydoria.png</file>
-        <file>images/32x32/application-x-sydoria.png</file>
-        <file>images/32x32/sydoria.png</file>
-        <file>images/about-tiled-sydoria-logo.png</file>
+        <file>images/about-dofus-map-editor-logo.png</file>
+        <file>images/24x24/dice.svg</file>
+        <file>images/32x32/application-x-dofus.png</file>
+        <file>images/32x32/dofus.png</file>
+        <file>images/16x16/application-x-dofus.png</file>
+        <file>images/16x16/dofus.png</file>
     </qresource>
 </RCC>

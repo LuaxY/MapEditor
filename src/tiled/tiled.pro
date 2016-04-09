@@ -3,7 +3,7 @@ include(../libtiled/libtiled.pri)
 include(../qtpropertybrowser/src/qtpropertybrowser.pri)
 
 TEMPLATE = app
-TARGET = tiled-sydoria
+TARGET = dofus-mapeditor
 target.path = $${PREFIX}/bin
 INSTALLS += target
 win32 {
@@ -318,11 +318,11 @@ FORMS += aboutdialog.ui \
     tileanimationeditor.ui
 
 icon32.path = $${PREFIX}/share/icons/hicolor/32x32/apps/
-icon32.files += images/32x32/sydoria.png
+icon32.files += images/32x32/dofus.png
 INSTALLS += icon32
 
 icon16.path = $${PREFIX}/share/icons/hicolor/16x16/apps/
-icon16.files += images/16x16/sydoria.png
+icon16.files += images/16x16/dofus.png
 INSTALLS += icon16
 
 iconscalable.path = $${PREFIX}/share/icons/hicolor/scalable/apps/
@@ -330,11 +330,11 @@ iconscalable.files += images/scalable/tiled.svg
 INSTALLS += iconscalable
 
 mimeicon16.path = $${PREFIX}/share/icons/hicolor/16x16/mimetypes/
-mimeicon16.files += images/16x16/application-x-sydoria.png
+mimeicon16.files += images/16x16/application-x-dofus.png
 INSTALLS += mimeicon16
 
 mimeicon32.path = $${PREFIX}/share/icons/hicolor/32x32/mimetypes/
-mimeicon32.files += images/32x32/application-x-sydoria.png
+mimeicon32.files += images/32x32/application-x-dofus.png
 INSTALLS += mimeicon32
 
 mimeiconscalable.path = $${PREFIX}/share/icons/hicolor/scalable/mimetypes/
