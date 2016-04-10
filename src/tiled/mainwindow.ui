@@ -213,7 +213,7 @@
      <normaloff>:/images/16x16/help-about.png</normaloff>:/images/16x16/help-about.png</iconset>
    </property>
    <property name="text">
-    <string>&amp;About Tiled</string>
+    <string>&amp;About Dofus MapEditor</string>
    </property>
    <property name="menuRole">
     <enum>QAction::AboutRole</enum>

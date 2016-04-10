@@ -1568,7 +1568,7 @@ void MainWindow::readSettings()
 void MainWindow::updateWindowTitle()
 {
     if (mMapDocument) {
-        setWindowTitle(tr("[*]%1 - Tiled - Sydoria Map Editor").arg(mMapDocument->displayName()));
+        setWindowTitle(tr("[*]%1 - Dofus.io Map Editor").arg(mMapDocument->displayName()));
         setWindowFilePath(mMapDocument->fileName());
         setWindowModified(mMapDocument->isModified());
     } else {

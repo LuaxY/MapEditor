@@ -147,12 +147,12 @@ int main(int argc, char *argv[])
 
     TiledApplication a(argc, argv);
 
-    a.setOrganizationDomain(QLatin1String("mapeditor.org"));
-    a.setApplicationName(QLatin1String("Tiled - Sydoria Map Editor"));
+    a.setOrganizationDomain(QLatin1String("dofus.io"));
+    a.setApplicationName(QLatin1String("Dofus.io Map Editor"));
 #ifdef BUILD_INFO_VERSION
     a.setApplicationVersion(QLatin1String(AS_STRING(BUILD_INFO_VERSION)));
 #else
-    a.setApplicationVersion(QLatin1String("0.11.0"));
+    a.setApplicationVersion(QLatin1String("0.12.0"));
 #endif
 
 #ifdef Q_OS_MAC
